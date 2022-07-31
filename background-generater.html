@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generater</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        background: linear-gradient(to right,red,yellow);
+        
+    }
+    h1{
+        text-align: center;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+
+    }
+    .color1{
+       position:absolute;
+       left: 40vw;
+        
+    }
+    .color2{
+        position:absolute;
+       left: 43vw;  
+    }
+    h3{
+        font-family: 'Edu NSW ACT Foundation', cursive;
+
+    }
+</style>
+<body id="gradient">
+    <h1>GRADIENT BACKGROUND GENERATOR</h1>
+    <h3></h3>
+    <input type="color" name="color1" class="color1" value="#000fff">
+    <input type="color" name="color2" class="color2" value="#fff000">
+    
+    <script>
+        var color1=document.querySelector(".color1")
+        var color2=document.querySelector(".color2")
+        var css=document.querySelector("h3");
+        var body=document.getElementById("gradient");
+
+        function colorchanger3(){
+         
+       body.style.background="linear-gradient(" + "to right" + "," + color1.value + "," + color2.value + ")";
+       css.textContent=body.style.background;
+
+        }
+        color1.addEventListener("input",colorchanger3);
+        color2.addEventListener("input",colorchanger3)
+
+    </script>
+
+</body>
+</html>
